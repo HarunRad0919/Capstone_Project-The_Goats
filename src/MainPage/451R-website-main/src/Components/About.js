@@ -1,14 +1,16 @@
 import React from 'react';
-import AboutBackground from "../Assets/about-background.jpg";
-import AboutBackgroundImage from "../Assets/about-background-image.png";
+import AboutBackgroundImage from "../Assets/keepingTrack.jpg";
 import { BsFillPlayCircleFill } from 'react-icons/bs';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 const About = () => {
+    const navigate = useNavigate();
+
+    const navigateToAboutUs = () => {
+       navigate('/aboutus');
+      };
   return (
     <div className='about-section-container'>
-        <div className='about-background-image-container'>
-            <img src={AboutBackground} alt="" />
-        </div>
         <div className='about-section-image-container'>
             <img src={AboutBackgroundImage} alt="" />
         </div>
@@ -26,7 +28,7 @@ const About = () => {
             with your credit cards, buit up your credit score and keep up with cash backs..
             </p>
             <div className='about-buttons-container'>
-                <button className='secondary-button'>Learn More</button>
+                <button className='secondary-button'onClick={navigateToAboutUs}>Learn More </button>
                 <button className='watch-video-button'><BsFillPlayCircleFill/>Watch Video</button>
             </div>
         </div>
@@ -34,4 +36,4 @@ const About = () => {
   );
 }
 
-export default About;
+export default About; 

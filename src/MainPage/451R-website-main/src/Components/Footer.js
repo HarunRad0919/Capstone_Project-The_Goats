@@ -33,6 +33,7 @@ const Footer = () => {
             <span>harun@umsyste.edu</span>
             <span>rivan@umsystem.edu</span>
             <span>ismail@umsystem.edu</span>
+            <span>tuana@umsystem.edu</span>
         </div>
         <div className='footer-section-colmns'>
             <span>Terms &Condititons</span>

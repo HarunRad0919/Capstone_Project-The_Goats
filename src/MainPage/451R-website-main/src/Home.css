@@ -316,7 +316,7 @@ nav {
     font-size: 1rem;
   }
   .home-bannerImage-container {
-    max-width: 600px;
+    max-width: 200px;
   }
 }
 @media (max-width: 800px) {
@@ -330,7 +330,7 @@ nav {
     display: flex;
   }
   .home-bannerImage-container {
-    max-width: 450px;
+    max-width: 100px;
   }
   .home-banner-container,
   .about-section-container {
@@ -514,6 +514,7 @@ nav {
 .footer-logo-container {
   width: 600px;
   margin-bottom: 1rem; /* Space between the logo and icons */
+  border-radius: 20px;
 }
 
 .footer-icons {
@@ -524,5 +525,63 @@ nav {
 
 .footer-icons svg {
   font-size: 1.5rem; /* Icon size */
-  color: #585858; /* Icon color */
+  color: #1d1c1d; /* Icon color */
+}
+
+
+
+.home-banner-container {
+  display: flex;
+  align-items: center; /* Aligns items vertically in the center */
+  justify-content: space-between; /* Puts space between the text and image sections */
+}
+
+.home-text-section {
+  flex: 1; /* Allows the text section to grow and take up space as needed */
+  padding-right: 2rem; /* Adds some space between the text and the image */
+}
+
+.home-image-container {
+  flex: 1; /* Allows the image container to grow and take up space as needed */
+  display: flex;
+  justify-content: flex-end; /* Aligns the image to the right */
+}
+.home-image-container img {
+  border-radius: 20px; /* Adjust the value as needed for the desired roundness */
+}
+
+
+
+
+
+
+
+
+
+.about-section-container {
+  display: flex;
+  align-items: center; /* Aligns items vertically in the center */
+  justify-content: center; /* Centers the items horizontally */
+  gap: 3rem; /* Adjust the space between the image and text as needed */
+}
+
+.about-section-image-container {
+  /* If you want a fixed size or max-size for your images adjust below */
+  flex-shrink: 0; /* Prevents the image container from shrinking */
+}
+
+.about-section-text-container {
+  flex: 1; /* Allows text container to take up the remaining space */
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .about-section-container {
+      flex-direction: column;
+      align-items: flex-start; /* Aligns items to the start of the container */
+  }
+
+  .about-section-image-container, .about-section-text-container {
+      width: 100%; /* Full width on small screens */
+  }
 }

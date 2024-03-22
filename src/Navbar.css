@@ -43,4 +43,7 @@
 .primary-button:hover {
   background-color: #8610e6;
 }
-  
+
+.navbar a:hover {
+  transform: translateY(5px); 
+}
